@@ -291,10 +291,12 @@ ul {
 }
 
 /* ---- 2. Full-width hero photo ---- */
+/* ---- 2. Full-width hero photo - ADJUSTED FOR FIGMA ---- */
 .hero__photo-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/6;
+  /* Perpendek tinggi foto agar sesuai Figma */
+  aspect-ratio: 16/4.2; 
   overflow: hidden;
   background: #c0d4e8;
   border-radius: 40px 40px 0 0; 
@@ -306,40 +308,16 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  /* Pastikan wajah tetap terlihat saat foto diperpendek */
+  object-position: center 20%; 
   z-index: 1;
-}
-
-/* Placeholder text visible when image not yet loaded */
-.hero__photo-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: repeating-linear-gradient(
-    -45deg,
-    rgba(26, 58, 92, 0.06) 0,
-    rgba(26, 58, 92, 0.06) 12px,
-    rgba(26, 58, 92, 0.02) 12px,
-    rgba(26, 58, 92, 0.02) 24px
-  );
-  color: rgba(26, 58, 92, 0.4);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  pointer-events: none;
-}
-
-/* When real photo loads, hide the placeholder */
-.hero__photo:not([src=""]):not([src*="onerror"]) ~ .hero__photo-placeholder {
-  display: none;
 }
 
 /* ---- 3. Dark navy bar + gear ornament ---- */
 .hero__bar {
   position: relative;
-  height: clamp(90px, 14vw, 150px);
+  /* Kurangi tinggi bar biru sedikit agar lebih proporsional */
+  height: clamp(80px, 12vw, 130px); 
   background: var(--navy);
   display: flex;
   align-items: flex-start;
@@ -350,12 +328,12 @@ ul {
 
 .hero__gear-slot {
   position: absolute;
-  top: 0; /* Positioned exactly at the top edge of the bar */
+  /* Geser gear naik lebih tinggi (menutupi foto guru) */
+  top: -15px; 
   left: 50%;
-  transform: translate(-50%, -50%); /* Centered vertically on the transition line */
-  width: clamp(320px, 48vw, 520px); /* Slightly larger for impact */
-  height: clamp(320px, 48vw, 520px);
-  filter: none; 
+  transform: translate(-50%, -50%); 
+  width: clamp(280px, 45vw, 480px); 
+  height: clamp(280px, 45vw, 480px);
   z-index: 100;
 }
 
@@ -366,8 +344,7 @@ ul {
 }
 
 /* ====================================
-   PARTNERSHIP SECTION
-   White bg, "PARTNERSHIP" left-aligned, logos in a row
+   PARTNERSHIP SECTION - REVISED
    ==================================== */
 .partnership {
   background: var(--white);
@@ -375,7 +352,7 @@ ul {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   position: relative;
-  z-index: 10; /* Ensure it doesn't overlap hero gear wrongly */
+  z-index: 10;
 }
 
 .partnership__title {
@@ -384,21 +361,29 @@ ul {
   font-weight: 700;
   color: var(--navy);
   letter-spacing: 0.2em;
-  text-align: left; /* LEFT, matches Figma */
+  text-align: left;
   margin-bottom: 1.6rem;
+  /* Menambahkan padding agar teks judul sejajar dengan logo pertama */
+  padding: 0 clamp(1.2rem, 4vw, 2.5rem); 
 }
 
 .partnership__logos {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(1.5rem, 4vw, 3.5rem);
+  /* UBAH DISINI: space-between untuk menyebarkan logo */
+  justify-content: space-between; 
   align-items: center;
-  justify-content: flex-start;
+  /* Gap tetap ada sebagai jarak minimal */
+  gap: 1.5rem; 
+  /* Padding horizontal agar logo tidak menempel ke pinggir layar */
+  padding: 0 clamp(1.2rem, 4vw, 2.5rem); 
 }
 
 .partnership__logo-item {
   display: flex;
   align-items: center;
+  /* Memastikan item bisa menyesuaikan ruang */
+  flex: 0 1 auto; 
 }
 
 .partnership__logo-item img {
@@ -410,8 +395,8 @@ ul {
     opacity var(--dur) var(--ease),
     transform var(--dur) var(--ease);
 }
-.partnership__logo-item img:hover,
-.partnership__logo-item .partner-text:hover {
+
+.partnership__logo-item img:hover {
   opacity: 1;
   transform: scale(1.06);
 }
