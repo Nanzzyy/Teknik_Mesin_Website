@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPM - SMKN 1 Denpasar</title>
+    <meta name="description"
+    content="Teknik Pemesinan SMKN 1 Denpasar - Mencetak lulusan kompeten di bidang pemesinan, pengelasan, dan manufaktur presisi.">
+    <link rel="stylesheet" href="src/style/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&family=Poller+One&display=swap"
+        rel="stylesheet">
+    <script src="src/js/index.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ===================== HEADER / NAVBAR ===================== -->
+    <header class="header" id="top">
+        <div class="header__logo">
+            <img src="src/assets/images/logo.svg" alt="Logo SMKN 1 Denpasar" class="header__logo-img"
+                onerror="this.style.display='none'">
+            <span class="header__logo-text">TPM</span>
+        </div>
+        <nav class="header__nav" id="main-nav">
+            <ul class="header__nav-list">
+                <li><a href="#home" class="header__nav-link active">Home</a></li>
+                <li><a href="#about" class="header__nav-link">About</a></li>
+                <li><a href="#career" class="header__nav-link">Career prospects</a></li>
+                <li><a href="#gallery" class="header__nav-link">Gallery</a></li>
+            </ul>
+        </nav>
+        <div class="header__right">
+            <a href="#contact" class="header__contact-btn">Contact Us</a>
+            <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===================== HERO SECTION ===================== -->
+        <!--
+            Layout (matches Figma):
+            - Top area: TPM gear logo (bottom-left), large "TEKNIK PEMESINAN" centered text (right of logo)
+            - Below text: full-width hero photo
+            - At the bottom: dark navy bar + gear+wrench ornament centered overlapping the bar
+        -->
+        <section id="home" class="hero">
+            <div class="hero__top">
+                <!-- Small gear logo bottom-left of the text area -->
+                <div class="hero__logo-mark">
+                    <img src="src/assets/images/logo.svg" alt="TPM Logo Mark" class="hero__logo-mark-img"
+                        onerror="this.style.display='none'">
+                </div>
+                <h1 class="hero__title">TEKNIK<br>PEMESINAN</h1>
+            </div>
+            <!-- Grouped Hero Content: Photo + Bar + Gear -->
+            <div class="hero__content-group">
+                <!-- Full-width photo below the title -->
+                <div class="hero__photo-wrap">
+                    <img src="src/assets/images/hero-photo.jpg" alt="Kegiatan Teknik Pemesinan SMKN 1 Denpasar"
+                        class="hero__photo">
+                    <!-- Placeholder shown when no image -->
+                    <div class="hero__photo-placeholder" aria-hidden="true">
+                        <span>hero-photo.jpg</span>
+                    </div>
+                </div>
+                <!-- Dark navy bottom bar with gear ornament overlapping -->
+                <div class="hero__bar">
+                    <div class="hero__gear-slot">
+                        <img src="src/assets/images/gear-hero.png" alt="Ornamen Gear Kunci" class="hero__gear-img"
+                            onerror="this.src='https://via.placeholder.com/200?text=Gear+Ornament'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PARTNERSHIP SECTION ===================== -->
+        <section class="partnership">
+            <div class="container">
+                <h2 class="partnership__title">PARTNERSHIP</h2>
+                <div class="partnership__logos">
+                    <div class="partnership__logo-item">
+                        <img src="src/assets/images/partner-kapitmas.png" alt="KAPITMAS"
+                            onerror="this.outerHTML='<span class=\'partner-text\'>KAPITMAS</span>'">
+                    </div>
+                    <div class="partnership__logo-item">
+                        <img src="src/assets/images/partner-arya.png" alt="CV. Arya Jaya Mandiri"
+                            onerror="this.outerHTML='<span class=\'partner-text\'>CV. ARYA JAYA</span>'">
+                    </div>
+                    <div class="partnership__logo-item">
+                        <img src="src/assets/images/partner-buana.png" alt="Buana Armada Lestari"
+                            onerror="this.outerHTML='<span class=\'partner-text\'>BUANA ARMADA</span>'">
+                    </div>
+                    <div class="partnership__logo-item">
+                        <img src="src/assets/images/partner-jaya.png" alt="PT. Jaya"
+                            onerror="this.outerHTML='<span class=\'partner-text\'>PT. JAYA</span>'">
+                    </div>
+                    <div class="partnership__logo-item">
+                        <img src="src/assets/images/partner-jrp.png" alt="JRP"
+                            onerror="this.outerHTML='<span class=\'partner-text\'>JRP</span>'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT SECTION ===================== -->
+        <section id="about" class="about">
+            <!-- Solid concentric circles ornament – bottom right -->
+            <div class="about__circles" aria-hidden="true">
+                <div class="about__circle about__circle--4"></div>
+                <div class="about__circle about__circle--3"></div>
+                <div class="about__circle about__circle--2"></div>
+                <div class="about__circle about__circle--1"></div>
+            </div>
+
+            <div class="container">
+                <!-- Blue tab heading -->
+                <div class="about__heading-wrap">
+                    <h2 class="about__heading">About Us</h2>
+                </div>
+
+                <div class="about__body">
+                    <!-- Left: images -->
+                    <div class="about__images">
+                        <div class="about__img-main-wrap">
+                            <img src="src/assets/images/about-main.jpg" alt="Siswa TPM dengan kendaraan listrik"
+                                class="about__img-main animate-fade">
+                        </div>
+                        <div class="about__img-thumbs">
+                            <img src="src/assets/images/about-sub1.jpg" alt="Kegiatan siswa 1"
+                                class="about__img-thumb animate-fade">
+                            <img src="src/assets/images/about-sub2.jpg" alt="Kegiatan siswa 2"
+                                class="about__img-thumb animate-fade">
+                            <img src="src/assets/images/about-sub3.jpg" alt="Pameran TPM"
+                                class="about__img-thumb animate-fade">
+                            <img src="src/assets/images/about-sub4.jpg" alt="Workshop TPM"
+                                class="about__img-thumb animate-fade">
+                        </div>
+                    </div>
+
+                    <!-- Right: text -->
+                    <div class="about__text animate-fade">
+                        <p>Jurusan TPM berkomitmen mencetak lulusan yang kompeten secara teknis dan bertanggung jawab.
+                            Kami mengintegrasikan praktik intensif dengan penekanan kuat pada standar industri.</p>
+                        <p><strong>Fokus Utama Pembelajaran:</strong></p>
+                        <ul class="about__list">
+                            <li>
+                                <span class="about__list-label">Keterampilan Inti:</span>
+                                Penguasaan mesin pemesinan modern (CNC, Bubut, Frais) dan teknik Pengelasan.
+                            </li>
+                            <li>
+                                <span class="about__list-label">Budaya Keselamatan (K3):</span>
+                                Penekanan berkelanjutan pada penggunaan APD dan analisis risiko di lingkungan bengkel.
+                            </li>
+                            <li>
+                                <span class="about__list-label">Disiplin Operasional:</span>
+                                Melatih siswa untuk bertanggung jawab penuh atas alat—mulai dari penggunaan hingga
+                                pembersihan dan pengembalian.
+                            </li>
+                        </ul>
+                        <p><strong>Optimalisasi Fasilitas:</strong> Kami menerapkan penjadwalan praktik yang ketat untuk
+                            memastikan setiap siswa mendapatkan waktu hands-on yang maksimal.</p>
+                        <p><strong>Jembatan Industri (PKL):</strong> Melalui jaringan MoU yang kuat dengan industri di
+                            Bali, kami memastikan penempatan PKL yang relevan dan dekat dengan lokasi siswa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CAREER PROSPECTS SECTION ===================== -->
+        <!--
+            Figma: Dark navy bg. Concentric circle ornament on top-right (from About section blending in).
+            Title "Career Prospects" centered. 4 glass cards.
+        -->
+        <section id="career" class="career">
+            <!-- Right-side concentric circle ornament (connecting from About section) -->
+            <div class="career__circles-right" aria-hidden="true">
+                <div class="career__cr--4"></div>
+                <div class="career__cr--3"></div>
+                <div class="career__cr--2"></div>
+                <div class="career__cr--1"></div>
+            </div>
+
+            <div class="container">
+                <h2 class="career__title">Career Prospects</h2>
+                <div class="career__grid">
+                    <div class="career-card animate-fade">
+                        <div class="career-card__img-wrap">
+                            <img src="src/assets/images/career-cnc.jpg" alt="Operator Mesin CNC"
+                                class="career-card__img">
+                        </div>
+                        <div class="career-card__body">
+                            <h3 class="career-card__title">Operator Mesin CNC &amp; Presisi</h3>
+                            <p class="career-card__desc">Mengoperasikan mesin modern (Bubut, Frais, CNC) untuk
+                                produksi komponen presisi tinggi.</p>
+                        </div>
+                    </div>
+                    <div class="career-card animate-fade">
+                        <div class="career-card__img-wrap">
+                            <img src="src/assets/images/career-welder.jpg" alt="Juru Las (Welder)"
+                                class="career-card__img">
+                        </div>
+                        <div class="career-card__body">
+                            <h3 class="career-card__title">Juru Las (Welder) Profesional</h3>
+                            <p class="career-card__desc">Melakukan pekerjaan pengelasan berstandar industri pada
+                                fabrikasi logam atau konstruksi berat.</p>
+                        </div>
+                    </div>
+                    <div class="career-card animate-fade">
+                        <div class="career-card__img-wrap">
+                            <img src="src/assets/images/career-tech.jpg" alt="Teknisi Perakitan"
+                                class="career-card__img">
+                        </div>
+                        <div class="career-card__body">
+                            <h3 class="career-card__title">Teknisi Perakitan dan Maintenance</h3>
+                            <p class="career-card__desc">Bertanggung jawab dalam perakitan, setting, dan pemeliharaan
+                                rutin peralatan mesin pabrik.</p>
+                        </div>
+                    </div>
+                    <div class="career-card animate-fade">
+                        <div class="career-card__img-wrap">
+                            <img src="src/assets/images/career-qc.jpg" alt="Quality Control" class="career-card__img">
+                        </div>
+                        <div class="career-card__body">
+                            <h3 class="career-card__title">Quality Control (QC) Manufaktur</h3>
+                            <p class="career-card__desc">Memastikan komponen yang diproduksi memenuhi standar kualitas
+                                dan toleransi teknis yang ditetapkan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== GALLERY SECTION ===================== -->
+        <!--
+            Figma: Continues dark navy bg.
+            "Gallery" title is RIGHT-ALIGNED.
+            Photos in a 4-column rounded-rect container.
+            Below: two large gear icons on left & right sides before footer curve.
+        -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="gallery__title">Gallery</h2>
+                <div class="gallery__grid">
+                    <div class="gallery-item animate-fade">
+                        <img src="src/assets/images/gallery-1.jpg" alt="SMK Fest 2024" class="gallery-item__img">
+                        <div class="gallery-item__overlay"><span>SMK Fest 2024</span></div>
+                    </div>
+                    <div class="gallery-item animate-fade">
+                        <img src="src/assets/images/gallery-2.jpg" alt="Praktik Mesin Bubut" class="gallery-item__img">
+                        <div class="gallery-item__overlay"><span>Praktik Mesin Bubut</span></div>
+                    </div>
+                    <div class="gallery-item animate-fade">
+                        <img src="src/assets/images/gallery-3.jpg" alt="Proyek Kendaraan Listrik"
+                            class="gallery-item__img">
+                        <div class="gallery-item__overlay"><span>Proyek Kendaraan Listrik</span></div>
+                    </div>
+                    <div class="gallery-item animate-fade">
+                        <img src="src/assets/images/gallery-4.jpg" alt="Kegiatan Workshop" class="gallery-item__img">
+                        <div class="gallery-item__overlay"><span>Kegiatan Workshop</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two large gear icons flanking the footer curve (as in Figma) -->
+            <div class="gallery__gears" aria-hidden="true">
+                <svg class="gallery__gear gallery__gear--left" viewBox="0 0 200 200" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="72" stroke="rgba(74,138,184,0.5)" stroke-width="16" fill="none" />
+                    <circle cx="100" cy="100" r="40" stroke="rgba(74,138,184,0.5)" stroke-width="10" fill="none" />
+                    <circle cx="100" cy="100" r="14" fill="rgba(74,138,184,0.3)" />
+                    <g fill="rgba(74,138,184,0.5)">
+                        <rect x="90" y="10" width="20" height="22" rx="4" />
+                        <rect x="90" y="168" width="20" height="22" rx="4" />
+                        <rect x="10" y="90" width="22" height="20" rx="4" />
+                        <rect x="168" y="90" width="22" height="20" rx="4" />
+                        <rect x="32" y="28" width="20" height="22" rx="4" transform="rotate(-45 42 39)" />
+                        <rect x="138" y="28" width="20" height="22" rx="4" transform="rotate(45 148 39)" />
+                        <rect x="32" y="150" width="20" height="22" rx="4" transform="rotate(45 42 161)" />
+                        <rect x="138" y="150" width="20" height="22" rx="4" transform="rotate(-45 148 161)" />
+                    </g>
+                </svg>
+                <svg class="gallery__gear gallery__gear--right" viewBox="0 0 200 200" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="72" stroke="rgba(74,138,184,0.5)" stroke-width="16" fill="none" />
+                    <circle cx="100" cy="100" r="40" stroke="rgba(74,138,184,0.5)" stroke-width="10" fill="none" />
+                    <circle cx="100" cy="100" r="14" fill="rgba(74,138,184,0.3)" />
+                    <g fill="rgba(74,138,184,0.5)">
+                        <rect x="90" y="10" width="20" height="22" rx="4" />
+                        <rect x="90" y="168" width="20" height="22" rx="4" />
+                        <rect x="10" y="90" width="22" height="20" rx="4" />
+                        <rect x="168" y="90" width="22" height="20" rx="4" />
+                        <rect x="32" y="28" width="20" height="22" rx="4" transform="rotate(-45 42 39)" />
+                        <rect x="138" y="28" width="20" height="22" rx="4" transform="rotate(45 148 39)" />
+                        <rect x="32" y="150" width="20" height="22" rx="4" transform="rotate(45 42 161)" />
+                        <rect x="138" y="150" width="20" height="22" rx="4" transform="rotate(-45 148 161)" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <!--
+        Figma: White bg with curved/wave top edge.
+        Left: "Follow Us" with social links + address.
+        Right: Google Map embed.
+        Bottom: copyright.
+    -->
+    <footer id="contact" class="footer">
+        <!-- SVG wave curve at top -->
+        <div class="footer__wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,80 C360,0 1080,0 1440,80 L1440,80 L0,80 Z" fill="#ffffff" />
+            </svg>
+        </div>
+
+        <div class="footer__body">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__info">
+                        <h3 class="footer__follow-title">Follow Us</h3>
+                        <div class="footer__socials">
+                            <a href="https://smkn1denpasar.sch.id/" target="_blank" rel="noopener"
+                                class="footer__social">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="2" y1="12" x2="22" y2="12" />
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                                <span>smkn1denpasar.sch.id</span>
+                            </a>
+                            <a href="https://www.instagram.com/smkn1denpasar/" target="_blank" rel="noopener"
+                                class="footer__social">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                                <span>@smkn1denpasar</span>
+                            </a>
+                        </div>
+                        <p class="footer__address">
+                            Jl. Hos Cokroaminoto No.84, Ubung,<br>
+                            Kec. Denpasar Utara, Kota Denpasar,<br>
+                            Bali 80116
+                        </p>
+                    </div>
+                    <div class="footer__map">
+                        <iframe title="Lokasi SMKN 1 Denpasar"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.002428003!2d115.21128!3d-8.63823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23e3b3c6765b7%3A0x36e7b26f90c27f4f!2sSMKN%201%20Denpasar!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+                            width="100%" height="280" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="container">
+                    <p>&copy; 2025 TPM SMKN 1 Denpasar — All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
