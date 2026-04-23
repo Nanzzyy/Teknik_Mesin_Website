@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPM - SMKN 1 Denpasar</title>
     <meta name="description"
-    content="Teknik Pemesinan SMKN 1 Denpasar - Mencetak lulusan kompeten di bidang pemesinan, pengelasan, dan manufaktur presisi.">
-    <link rel="stylesheet" href="src/style/global.css">
+        content="Teknik Pemesinan SMKN 1 Denpasar - Mencetak lulusan kompeten di bidang pemesinan, pengelasan, dan manufaktur presisi.">
+    <link rel="stylesheet" href="src/style/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,23 +19,38 @@
 <body>
 
     <!-- ===================== HEADER / NAVBAR ===================== -->
-    <header class="header" id="top">
-        <div class="header__logo">
-            <img src="src/assets/images/logo.svg" alt="Logo SMKN 1 Denpasar" class="header__logo-img"
+    <header
+        class="header sticky top-0 z-[900] bg-white shadow-sm flex items-center h-[5.5rem] px-[clamp(1.2rem,4vw,2.5rem)] gap-4"
+        id="top">
+        <div class="header__logo flex items-center gap-[0.45rem] flex-shrink-0">
+            <img src="src/assets/images/logo.svg" alt="Logo SMKN 1 Denpasar" class="header__logo-img h-11 w-auto"
                 onerror="this.style.display='none'">
-            <span class="header__logo-text">TPM</span>
+            <span class="header__logo-text font-brand text-[1.85rem] text-navy">TPM</span>
         </div>
-        <nav class="header__nav" id="main-nav">
-            <ul class="header__nav-list">
-                <li><a href="#home" class="header__nav-link active">Home</a></li>
-                <li><a href="#about" class="header__nav-link">About</a></li>
-                <li><a href="#career" class="header__nav-link">Career prospects</a></li>
-                <li><a href="#gallery" class="header__nav-link">Gallery</a></li>
+        <nav class="header__nav flex-1 flex justify-center max-md:hidden max-md:fixed max-md:top-[5.5rem] max-md:left-0 max-md:right-0 max-md:bg-white max-md:flex-col max-md:items-stretch max-md:px-[clamp(1.2rem,4vw,2.5rem)] max-md:py-5 max-md:shadow-md max-md:z-[800]"
+            id="main-nav">
+            <ul class="header__nav-list flex items-center gap-1 max-md:flex-col max-md:gap-0">
+                <li class="max-md:w-full"><a href="#home"
+                        class="header__nav-link active text-[1rem] font-medium text-text-mid px-[0.8rem] py-[0.35rem] rounded-md relative transition-colors duration-300 hover:text-navy hover:font-semibold max-md:block max-md:py-[0.7rem] max-md:border-b max-md:border-border-color">Home</a>
+                </li>
+                <li class="max-md:w-full"><a href="#about"
+                        class="header__nav-link text-[1rem] font-medium text-text-mid px-[0.8rem] py-[0.35rem] rounded-md relative transition-colors duration-300 hover:text-navy hover:font-semibold max-md:block max-md:py-[0.7rem] max-md:border-b max-md:border-border-color">About</a>
+                </li>
+                <li class="max-md:w-full"><a href="#career"
+                        class="header__nav-link text-[1rem] font-medium text-text-mid px-[0.8rem] py-[0.35rem] rounded-md relative transition-colors duration-300 hover:text-navy hover:font-semibold max-md:block max-md:py-[0.7rem] max-md:border-b max-md:border-border-color">Career
+                        prospects</a></li>
+                <li class="max-md:w-full"><a href="#gallery"
+                        class="header__nav-link text-[1rem] font-medium text-text-mid px-[0.8rem] py-[0.35rem] rounded-md relative transition-colors duration-300 hover:text-navy hover:font-semibold max-md:block max-md:py-[0.7rem] max-md:border-b max-md:border-border-color">Gallery</a>
+                </li>
             </ul>
         </nav>
-        <div class="header__right">
-            <a href="#contact" class="header__contact-btn">Contact Us</a>
-            <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <div class="header__right flex-shrink-0 flex items-center gap-3">
+            <a href="#contact"
+                class="header__contact-btn bg-navy text-white px-7 py-2.5 rounded-full text-[0.95rem] font-semibold whitespace-nowrap transition-all duration-300 hover:bg-blue hover:-translate-y-px hover:shadow-md max-md:hidden">Contact
+                Us</a>
+            <button
+                class="header__hamburger flex md:hidden flex-col justify-between w-[26px] h-[18px] bg-none border-none cursor-pointer p-0"
+                id="hamburger" aria-label="Toggle menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -50,30 +65,39 @@
             - Below text: full-width hero photo
             - At the bottom: dark navy bar + gear+wrench ornament centered overlapping the bar
         -->
-        <section id="home" class="hero">
-            <div class="hero__top">
+        <section id="home" class="hero relative overflow-visible bg-white">
+            <div
+                class="hero__top relative py-6 md:py-10 flex items-center justify-center min-h-[140px] max-md:min-h-[100px]">
                 <!-- Small gear logo bottom-left of the text area -->
-                <div class="hero__logo-mark">
-                    <img src="src/assets/images/logo.svg" alt="TPM Logo Mark" class="hero__logo-mark-img"
-                        onerror="this.style.display='none'">
+                <div
+                    class="hero__logo-mark absolute left-[clamp(1.2rem,4vw,2.5rem)] bottom-4 w-[clamp(50px,7vw,80px)] h-[clamp(50px,7vw,80px)] opacity-85 max-[480px]:w-[42px] max-[480px]:h-[42px]">
+                    <img src="src/assets/images/logo.svg" alt="TPM Logo Mark"
+                        class="hero__logo-mark-img w-full h-full object-contain" onerror="this.style.display='none'">
                 </div>
-                <h1 class="hero__title">TEKNIK<br>PEMESINAN</h1>
+                <h1
+                    class="hero__title font-serif text-[clamp(3rem,8vw,7rem)] font-black text-text-dark text-center leading-none tracking-tighter max-md:text-[clamp(2.5rem,9vw,4.5rem)] max-[480px]:text-[clamp(2rem,11vw,3.5rem)] mb-8 md:mb-14">
+                    TEKNIK<br>PEMESINAN</h1>
             </div>
             <!-- Grouped Hero Content: Photo + Bar + Gear -->
-            <div class="hero__content-group">
-                <!-- Full-width photo below the title -->
-                <div class="hero__photo-wrap">
+            <div
+                class="hero__content-group w-[80%] max-w-[800px] mx-auto mb-[clamp(6rem,12vw,10rem)] rounded-[40px] overflow-visible bg-navy">
+                <!-- Full-width photo below the title -->   
+                <div
+                    class="hero__photo-wrap relative w-full aspect-[16/4.2] max-md:aspect-[16/7] max-[480px]:aspect-[4/3] overflow-hidden bg-[#c0d4e8] rounded-t-[40px]">
                     <img src="tirtur/guru revisi.jpeg" alt="Kegiatan Teknik Pemesinan SMKN 1 Denpasar"
-                        class="hero__photo">
+                        class="hero__photo absolute inset-0 w-full h-full object-cover object-[center_20%] z-[1]">
                     <!-- Placeholder shown when no image -->
-                    <div class="hero__photo-placeholder" aria-hidden="true">
+                    <div class="hero__photo-placeholder hidden" aria-hidden="true">
                         <span>hero-photo.jpg</span>
                     </div>
                 </div>
                 <!-- Dark navy bottom bar with gear ornament overlapping -->
-                <div class="hero__bar">
-                    <div class="hero__gear-slot">
-                        <img src="src/assets/images/gear-hero.png" alt="Ornamen Gear Kunci" class="hero__gear-img"
+                <div
+                    class="hero__bar relative h-[clamp(80px,12vw,130px)] bg-navy flex items-start justify-center overflow-visible rounded-b-[40px]">
+                    <div
+                        class="hero__gear-slot absolute top-[-15px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(280px,45vw,480px)] h-[clamp(280px,45vw,480px)] z-[100] max-[480px]:w-[clamp(100px,35vw,150px)] max-[480px]:h-[clamp(100px,35vw,150px)]">
+                        <img src="src/assets/images/gear-hero.png" alt="Ornamen Gear Kunci"
+                            class="hero__gear-img w-full h-full object-contain"
                             onerror="this.src='https://via.placeholder.com/200?text=Gear+Ornament'">
                     </div>
                 </div>
@@ -81,92 +105,120 @@
         </section>
 
         <!-- ===================== PARTNERSHIP SECTION ===================== -->
-        <section class="partnership">
+        <section class="partnership bg-white py-[clamp(2rem,4vw,3rem)] border-y border-border-color relative z-10">
             <div class="container">
-                <h2 class="partnership__title">PARTNERSHIP</h2>
-                <div class="partnership__logos">
-                    <div class="partnership__logo-item">
+                <h2
+                    class="partnership__title font-serif text-[clamp(1.1rem,2.5vw,1.6rem)] font-bold text-navy tracking-[0.2em] text-left mb-[1.6rem] px-[clamp(1.2rem,4vw,2.5rem)]">
+                    PARTNERSHIP</h2>
+                <div
+                    class="partnership__logos flex flex-wrap justify-between items-center gap-6 px-[clamp(1.2rem,4vw,2.5rem)]">
+                    <div class="partnership__logo-item flex items-center flex-[0_1_auto]">
                         <img src="tirtur/kapitmas.jpeg" alt="KAPITMAS"
-                            onerror="this.outerHTML='<span class=\'partner-text\'>KAPITMAS</span>'">
+                            class="h-12 w-auto object-contain opacity-65 transition-all duration-300 hover:opacity-100 hover:scale-[1.06]"
+                            onerror="this.outerHTML='<span class=\'partner-text font-bold text-[0.9rem] text-text-mid tracking-[0.12em] py-[0.4rem] opacity-70 cursor-default transition-opacity duration-300 hover:opacity-100\'>KAPITMAS</span>'">
                     </div>
-                    <div class="partnership__logo-item">
+                    <div class="partnership__logo-item flex items-center flex-[0_1_auto]">
                         <img src="tirtur/cv arya.jpeg" alt="CV. Arya Jaya Mandiri"
-                            onerror="this.outerHTML='<span class=\'partner-text\'>CV. ARYA JAYA</span>'">
+                            class="h-12 w-auto object-contain opacity-65 transition-all duration-300 hover:opacity-100 hover:scale-[1.06]"
+                            onerror="this.outerHTML='<span class=\'partner-text font-bold text-[0.9rem] text-text-mid tracking-[0.12em] py-[0.4rem] opacity-70 cursor-default transition-opacity duration-300 hover:opacity-100\'>CV. ARYA JAYA</span>'">
                     </div>
-                    <div class="partnership__logo-item">
+                    <div class="partnership__logo-item flex items-center flex-[0_1_auto]">
                         <img src="tirtur/dharma .jpeg" alt="Buana Armada Lestari"
-                            onerror="this.outerHTML='<span class=\'partner-text\'>BUANA ARMADA</span>'">
+                            class="h-12 w-auto object-contain opacity-65 transition-all duration-300 hover:opacity-100 hover:scale-[1.06]"
+                            onerror="this.outerHTML='<span class=\'partner-text font-bold text-[0.9rem] text-text-mid tracking-[0.12em] py-[0.4rem] opacity-70 cursor-default transition-opacity duration-300 hover:opacity-100\'>BUANA ARMADA</span>'">
                     </div>
-                    <div class="partnership__logo-item">
+                    <div class="partnership__logo-item flex items-center flex-[0_1_auto]">
                         <img src="tirtur/lestari.jpeg" alt="PT. Jaya"
-                            onerror="this.outerHTML='<span class=\'partner-text\'>PT. JAYA</span>'">
+                            class="h-12 w-auto object-contain opacity-65 transition-all duration-300 hover:opacity-100 hover:scale-[1.06]"
+                            onerror="this.outerHTML='<span class=\'partner-text font-bold text-[0.9rem] text-text-mid tracking-[0.12em] py-[0.4rem] opacity-70 cursor-default transition-opacity duration-300 hover:opacity-100\'>PT. JAYA</span>'">
                     </div>
-                    <div class="partnership__logo-item">
+                    <div class="partnership__logo-item flex items-center flex-[0_1_auto]">
                         <img src="tirtur/jpp.jpeg" alt="JRP"
-                            onerror="this.outerHTML='<span class=\'partner-text\'>JRP</span>'">
+                            class="h-12 w-auto object-contain opacity-65 transition-all duration-300 hover:opacity-100 hover:scale-[1.06]"
+                            onerror="this.outerHTML='<span class=\'partner-text font-bold text-[0.9rem] text-text-mid tracking-[0.12em] py-[0.4rem] opacity-70 cursor-default transition-opacity duration-300 hover:opacity-100\'>JRP</span>'">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===================== ABOUT SECTION ===================== -->
-        <section id="about" class="about">
+        <section id="about" class="about bg-white py-[clamp(3rem,6vw,5rem)] relative overflow-hidden">
             <!-- Solid concentric circles ornament – bottom right -->
-            <div class="about__circles" aria-hidden="true">
-                <div class="about__circle about__circle--4"></div>
-                <div class="about__circle about__circle--3"></div>
-                <div class="about__circle about__circle--2"></div>
-                <div class="about__circle about__circle--1"></div>
+            <div class="about__circles absolute -right-[100px] -bottom-[100px] pointer-events-none z-0 max-md:-right-[60px] max-md:-bottom-[60px]"
+                aria-hidden="true">
+                <div
+                    class="about__circle about__circle--4 absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] bg-navy z-[4] max-md:w-[85px] max-md:h-[85px]">
+                </div>
+                <div
+                    class="about__circle about__circle--3 absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] bg-blue-light z-[3] max-md:w-[150px] max-md:h-[150px]">
+                </div>
+                <div
+                    class="about__circle about__circle--2 absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-[#9dc7e4] z-[2] max-md:w-[230px] max-md:h-[230px]">
+                </div>
+                <div
+                    class="about__circle about__circle--1 absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#d9ebf7] z-[1] max-md:w-[320px] max-md:h-[320px]">
+                </div>
             </div>
 
-            <div class="container">
+            <div class="container relative z-[1]">
                 <!-- Blue tab heading -->
-                <div class="about__heading-wrap">
-                    <h2 class="about__heading">About Us</h2>
+                <div class="about__heading-wrap mb-8">
+                    <h2
+                        class="about__heading inline-block bg-navy text-white font-sans text-[clamp(1.3rem,2.5vw,1.8rem)] font-bold px-8 py-[0.55rem] rounded-tr-lg">
+                        About Us</h2>
                 </div>
 
-                <div class="about__body">
+                <div class="about__body grid grid-cols-2 gap-[clamp(2rem,4vw,4rem)] items-start max-md:grid-cols-1">
                     <!-- Left: images -->
-                    <div class="about__images">
-                        <div class="about__img-main-wrap">
-                            <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.33.jpeg" alt="Siswa TPM dengan kendaraan listrik"
-                                class="about__img-main animate-fade">
+                    <div class="about__images flex flex-col gap-[0.8rem]">
+                        <div class="about__img-main-wrap w-full aspect-[4/3] bg-[#c0d4e8] rounded-md overflow-hidden">
+                            <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.33.jpeg"
+                                alt="Siswa TPM dengan kendaraan listrik"
+                                class="about__img-main w-full h-full object-cover block animate-fade">
                         </div>
-                        <div class="about__img-thumbs">
+                        <div class="about__img-thumbs grid grid-cols-4 gap-[0.6rem] max-[480px]:grid-cols-2">
                             <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.32.jpeg" alt="Kegiatan siswa 1"
-                                class="about__img-thumb animate-fade">
+                                class="about__img-thumb aspect-square w-full object-cover rounded-sm bg-[#c0d4e8] block animate-fade">
                             <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.34 (2).jpeg" alt="Kegiatan siswa 2"
-                                class="about__img-thumb animate-fade">
+                                class="about__img-thumb aspect-square w-full object-cover rounded-sm bg-[#c0d4e8] block animate-fade">
                             <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.32.jpeg" alt="Pameran TPM"
-                                class="about__img-thumb animate-fade">
+                                class="about__img-thumb aspect-square w-full object-cover rounded-sm bg-[#c0d4e8] block animate-fade">
                             <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.34.jpeg" alt="Workshop TPM"
-                                class="about__img-thumb animate-fade">
+                                class="about__img-thumb aspect-square w-full object-cover rounded-sm bg-[#c0d4e8] block animate-fade">
                         </div>
                     </div>
 
                     <!-- Right: text -->
                     <div class="about__text animate-fade">
-                        <p>Jurusan TPM berkomitmen mencetak lulusan yang kompeten secara teknis dan bertanggung jawab.
+                        <p class="text-[clamp(0.85rem,1.4vw,0.95rem)] text-text-mid mb-4 leading-[1.85]">Jurusan TPM
+                            berkomitmen mencetak lulusan yang kompeten secara teknis dan bertanggung jawab.
                             Kami mengintegrasikan praktik intensif dengan penekanan kuat pada standar industri.</p>
-                        <p><strong>Fokus Utama Pembelajaran:</strong></p>
-                        <ul class="about__list">
-                            <li>
-                                <span class="about__list-label">Keterampilan Inti:</span>
+                        <p class="text-[clamp(0.85rem,1.4vw,0.95rem)] text-text-mid mb-4 leading-[1.85]"><strong>Fokus
+                                Utama Pembelajaran:</strong></p>
+                        <ul class="about__list flex flex-col gap-[0.55rem] mb-[1.2rem]">
+                            <li
+                                class="text-[clamp(0.83rem,1.3vw,0.92rem)] text-text-mid pl-[1.2rem] relative leading-[1.75] before:content-['›'] before:absolute before:left-0 before:text-navy before:font-bold before:text-[1.1rem] before:leading-[1.4]">
+                                <span class="about__list-label font-bold text-navy">Keterampilan Inti:</span>
                                 Penguasaan mesin pemesinan modern (CNC, Bubut, Frais) dan teknik Pengelasan.
                             </li>
-                            <li>
-                                <span class="about__list-label">Budaya Keselamatan (K3):</span>
+                            <li
+                                class="text-[clamp(0.83rem,1.3vw,0.92rem)] text-text-mid pl-[1.2rem] relative leading-[1.75] before:content-['›'] before:absolute before:left-0 before:text-navy before:font-bold before:text-[1.1rem] before:leading-[1.4]">
+                                <span class="about__list-label font-bold text-navy">Budaya Keselamatan (K3):</span>
                                 Penekanan berkelanjutan pada penggunaan APD dan analisis risiko di lingkungan bengkel.
                             </li>
-                            <li>
-                                <span class="about__list-label">Disiplin Operasional:</span>
+                            <li
+                                class="text-[clamp(0.83rem,1.3vw,0.92rem)] text-text-mid pl-[1.2rem] relative leading-[1.75] before:content-['›'] before:absolute before:left-0 before:text-navy before:font-bold before:text-[1.1rem] before:leading-[1.4]">
+                                <span class="about__list-label font-bold text-navy">Disiplin Operasional:</span>
                                 Melatih siswa untuk bertanggung jawab penuh atas alat—mulai dari penggunaan hingga
                                 pembersihan dan pengembalian.
                             </li>
                         </ul>
-                        <p><strong>Optimalisasi Fasilitas:</strong> Kami menerapkan penjadwalan praktik yang ketat untuk
+                        <p class="text-[clamp(0.85rem,1.4vw,0.95rem)] text-text-mid mb-4 leading-[1.85]">
+                            <strong>Optimalisasi Fasilitas:</strong> Kami menerapkan penjadwalan praktik yang ketat
+                            untuk
                             memastikan setiap siswa mendapatkan waktu hands-on yang maksimal.</p>
-                        <p><strong>Jembatan Industri (PKL):</strong> Melalui jaringan MoU yang kuat dengan industri di
+                        <p class="text-[clamp(0.85rem,1.4vw,0.95rem)] text-text-mid mb-4 leading-[1.85]">
+                            <strong>Jembatan Industri (PKL):</strong> Melalui jaringan MoU yang kuat dengan industri di
                             Bali, kami memastikan penempatan PKL yang relevan dan dekat dengan lokasi siswa.</p>
                     </div>
                 </div>
@@ -178,58 +230,91 @@
             Figma: Dark navy bg. Concentric circle ornament on top-right (from About section blending in).
             Title "Career Prospects" centered. 4 glass cards.
         -->
-        <section id="career" class="career">
+        <section id="career" class="career bg-navy py-[clamp(3rem,6vw,5rem)] relative overflow-hidden">
             <!-- Right-side concentric circle ornament (connecting from About section) -->
-            <div class="career__circles-right" aria-hidden="true">
-                <div class="career__cr--4"></div>
-                <div class="career__cr--3"></div>
-                <div class="career__cr--2"></div>
-                <div class="career__cr--1"></div>
+            <div class="career__circles-right absolute -top-[100px] -right-[100px] pointer-events-none z-0 max-md:-top-[60px] max-md:-right-[60px]"
+                aria-hidden="true">
+                <div
+                    class="career__cr--4 absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] bg-[rgba(16,37,64,0.8)] z-[4] max-md:w-[85px] max-md:h-[85px]">
+                </div>
+                <div
+                    class="career__cr--3 absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] bg-[rgba(29,69,119,0.5)] z-[3] max-md:w-[150px] max-md:h-[150px]">
+                </div>
+                <div
+                    class="career__cr--2 absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] bg-[rgba(44,96,150,0.3)] z-[2] max-md:w-[230px] max-md:h-[230px]">
+                </div>
+                <div
+                    class="career__cr--1 absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[rgba(77,142,184,0.22)] z-[1] max-md:w-[320px] max-md:h-[320px]">
+                </div>
             </div>
 
-            <div class="container">
-                <h2 class="career__title">Career Prospects</h2>
-                <div class="career__grid">
-                    <div class="career-card animate-fade">
-                        <div class="career-card__img-wrap">
+            <div class="container relative z-[1]">
+                <h2
+                    class="career__title font-sans text-[clamp(1.8rem,4vw,2.6rem)] font-bold text-white text-center mb-[0.6rem] after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-blue-pale after:rounded-sm after:mx-auto after:mt-2">
+                    Career Prospects</h2>
+                <div
+                    class="career__grid grid grid-cols-4 gap-[clamp(0.8rem,1.5vw,1.5rem)] mt-10 max-lg:grid-cols-2 max-md:grid-cols-2 max-[480px]:grid-cols-1">
+                    <div
+                        class="career-card bg-[rgba(255,255,255,0.07)] border border-[rgba(91,163,217,0.3)] rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.35)] hover:border-blue-pale flex flex-col group animate-fade">
+                        <div class="career-card__img-wrap w-full aspect-[4/3] overflow-hidden bg-navy-mid">
                             <img src="tirtur/juru las.jpeg" alt="Operator Mesin CNC"
-                                class="career-card__img">
+                                class="career-card__img w-full h-full object-cover block transition-transform duration-300 group-hover:scale-105">
                         </div>
-                        <div class="career-card__body">
-                            <h3 class="career-card__title">Operator Mesin CNC &amp; Presisi</h3>
-                            <p class="career-card__desc">Mengoperasikan mesin modern (Bubut, Frais, CNC) untuk
+                        <div class="career-card__body p-4 pb-[1.3rem] flex-1 flex flex-col gap-2">
+                            <h3
+                                class="career-card__title font-serif text-[clamp(0.88rem,1.3vw,1rem)] font-bold text-gold-light leading-[1.4]">
+                                Operator Mesin CNC &amp; Presisi</h3>
+                            <p
+                                class="career-card__desc text-[clamp(0.76rem,1.1vw,0.84rem)] text-[rgba(255,255,255,0.72)] leading-[1.7]">
+                                Mengoperasikan mesin modern (Bubut, Frais, CNC) untuk
                                 produksi komponen presisi tinggi.</p>
                         </div>
                     </div>
-                    <div class="career-card animate-fade">
-                        <div class="career-card__img-wrap">
+                    <div
+                        class="career-card bg-[rgba(255,255,255,0.07)] border border-[rgba(91,163,217,0.3)] rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.35)] hover:border-blue-pale flex flex-col group animate-fade">
+                        <div class="career-card__img-wrap w-full aspect-[4/3] overflow-hidden bg-navy-mid">
                             <img src="tirtur/juru las welder.jpeg" alt="Juru Las (Welder)"
-                                class="career-card__img">
+                                class="career-card__img w-full h-full object-cover block transition-transform duration-300 group-hover:scale-105">
                         </div>
-                        <div class="career-card__body">
-                            <h3 class="career-card__title">Juru Las (Welder) Profesional</h3>
-                            <p class="career-card__desc">Melakukan pekerjaan pengelasan berstandar industri pada
+                        <div class="career-card__body p-4 pb-[1.3rem] flex-1 flex flex-col gap-2">
+                            <h3
+                                class="career-card__title font-serif text-[clamp(0.88rem,1.3vw,1rem)] font-bold text-gold-light leading-[1.4]">
+                                Juru Las (Welder) Profesional</h3>
+                            <p
+                                class="career-card__desc text-[clamp(0.76rem,1.1vw,0.84rem)] text-[rgba(255,255,255,0.72)] leading-[1.7]">
+                                Melakukan pekerjaan pengelasan berstandar industri pada
                                 fabrikasi logam atau konstruksi berat.</p>
                         </div>
                     </div>
-                    <div class="career-card animate-fade">
-                        <div class="career-card__img-wrap">
+                    <div
+                        class="career-card bg-[rgba(255,255,255,0.07)] border border-[rgba(91,163,217,0.3)] rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.35)] hover:border-blue-pale flex flex-col group animate-fade">
+                        <div class="career-card__img-wrap w-full aspect-[4/3] overflow-hidden bg-navy-mid">
                             <img src="tirtur/teknisi perakitan.jpeg" alt="Teknisi Perakitan"
-                                class="career-card__img">
+                                class="career-card__img w-full h-full object-cover block transition-transform duration-300 group-hover:scale-105">
                         </div>
-                        <div class="career-card__body">
-                            <h3 class="career-card__title">Teknisi Perakitan dan Maintenance</h3>
-                            <p class="career-card__desc">Bertanggung jawab dalam perakitan, setting, dan pemeliharaan
+                        <div class="career-card__body p-4 pb-[1.3rem] flex-1 flex flex-col gap-2">
+                            <h3
+                                class="career-card__title font-serif text-[clamp(0.88rem,1.3vw,1rem)] font-bold text-gold-light leading-[1.4]">
+                                Teknisi Perakitan dan Maintenance</h3>
+                            <p
+                                class="career-card__desc text-[clamp(0.76rem,1.1vw,0.84rem)] text-[rgba(255,255,255,0.72)] leading-[1.7]">
+                                Bertanggung jawab dalam perakitan, setting, dan pemeliharaan
                                 rutin peralatan mesin pabrik.</p>
                         </div>
                     </div>
-                    <div class="career-card animate-fade">
-                        <div class="career-card__img-wrap">
-                            <img src="tirtur/quality control.jpeg" alt="Quality Control" class="career-card__img">
+                    <div
+                        class="career-card bg-[rgba(255,255,255,0.07)] border border-[rgba(91,163,217,0.3)] rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_18px_44px_rgba(0,0,0,0.35)] hover:border-blue-pale flex flex-col group animate-fade">
+                        <div class="career-card__img-wrap w-full aspect-[4/3] overflow-hidden bg-navy-mid">
+                            <img src="tirtur/quality control.jpeg" alt="Quality Control"
+                                class="career-card__img w-full h-full object-cover block transition-transform duration-300 group-hover:scale-105">
                         </div>
-                        <div class="career-card__body">
-                            <h3 class="career-card__title">Quality Control (QC) Manufaktur</h3>
-                            <p class="career-card__desc">Memastikan komponen yang diproduksi memenuhi standar kualitas
+                        <div class="career-card__body p-4 pb-[1.3rem] flex-1 flex flex-col gap-2">
+                            <h3
+                                class="career-card__title font-serif text-[clamp(0.88rem,1.3vw,1rem)] font-bold text-gold-light leading-[1.4]">
+                                Quality Control (QC) Manufaktur</h3>
+                            <p
+                                class="career-card__desc text-[clamp(0.76rem,1.1vw,0.84rem)] text-[rgba(255,255,255,0.72)] leading-[1.7]">
+                                Memastikan komponen yang diproduksi memenuhi standar kualitas
                                 dan toleransi teknis yang ditetapkan.</p>
                         </div>
                     </div>
@@ -244,38 +329,66 @@
             Photos in a 4-column rounded-rect container.
             Below: two large gear icons on left & right sides before footer curve.
         -->
-        <section id="gallery" class="gallery">
-            <div class="container">
-                <h2 class="gallery__title">Gallery</h2>
-                <div class="gallery__grid">
-                    <div class="gallery-item animate-fade">
-                        <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.34 (2).jpeg" alt="SMK Fest 2024" class="gallery-item__img">
-                        <div class="gallery-item__overlay"><span>SMK Fest 2024</span></div>
+        <section id="gallery" class="gallery bg-navy pt-0 pb-0 relative">
+            <div
+                class="container relative z-[1] py-[clamp(2rem,4vw,3.5rem)] pb-[clamp(2rem,4vw,3rem)] after:content-[''] after:table after:clear-both">
+                <h2
+                    class="gallery__title font-sans text-[clamp(1.8rem,4vw,2.6rem)] font-bold text-white text-right mb-[0.5rem] relative inline-block float-right after:content-[''] after:block after:w-[60px] after:h-[3px] after:bg-blue-pale after:rounded-sm after:mt-1.5 after:ml-auto max-md:float-none max-md:text-center max-md:after:mx-auto">
+                    Gallery</h2>
+                <div
+                    class="gallery__grid grid grid-cols-4 gap-[clamp(0.6rem,1.2vw,1rem)] bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] rounded-lg p-[clamp(0.6rem,1.2vw,1rem)] mt-6 clear-both max-lg:grid-cols-2 max-md:grid-cols-2 max-[480px]:grid-cols-2">
+                    <div
+                        class="gallery-item relative rounded-sm overflow-hidden aspect-square bg-navy-mid group animate-fade">
+                        <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.34 (2).jpeg" alt="SMK Fest 2024"
+                            class="gallery-item__img w-full h-full object-cover block transition-transform duration-300 group-hover:scale-105">
+                        <div
+                            class="gallery-item__overlay absolute inset-0 bg-gradient-to-t from-[rgba(16,37,64,0.85)] to-transparent flex items-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-white text-[0.8rem] font-semibold tracking-wider">SMK Fest 2024</span>
+                        </div>
                     </div>
-                    <div class="gallery-item animate-fade">
-                        <img src="tirtur/praktik mesin bubut.jpeg" alt="Praktik Mesin Bubut" class="gallery-item__img">
-                        <div class="gallery-item__overlay"><span>Praktik Mesin Bubut</span></div>
+                    <div
+                        class="gallery-item relative rounded-sm overflow-hidden aspect-square bg-navy-mid group animate-fade">
+                        <img src="tirtur/praktik mesin bubut.jpeg" alt="Praktik Mesin Bubut"
+                            class="gallery-item__img w-full h-full object-cover block transition-transform duration-300 group-hover:scale-105">
+                        <div
+                            class="gallery-item__overlay absolute inset-0 bg-gradient-to-t from-[rgba(16,37,64,0.85)] to-transparent flex items-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-white text-[0.8rem] font-semibold tracking-wider">Praktik Mesin
+                                Bubut</span>
+                        </div>
                     </div>
-                    <div class="gallery-item animate-fade">
+                    <div
+                        class="gallery-item relative rounded-sm overflow-hidden aspect-square bg-navy-mid group animate-fade">
                         <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.32 (1).jpeg" alt="Proyek Kendaraan Listrik"
-                            class="gallery-item__img">
-                        <div class="gallery-item__overlay"><span>Proyek Kendaraan Listrik</span></div>
+                            class="gallery-item__img w-full h-full object-cover block transition-transform duration-300 group-hover:scale-105">
+                        <div
+                            class="gallery-item__overlay absolute inset-0 bg-gradient-to-t from-[rgba(16,37,64,0.85)] to-transparent flex items-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-white text-[0.8rem] font-semibold tracking-wider">Proyek Kendaraan
+                                Listrik</span>
+                        </div>
                     </div>
-                    <div class="gallery-item animate-fade">
-                        <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.31 (1).jpeg" alt="Kegiatan Workshop" class="gallery-item__img">
-                        <div class="gallery-item__overlay"><span>Kegiatan Workshop</span></div>
+                    <div
+                        class="gallery-item relative rounded-sm overflow-hidden aspect-square bg-navy-mid group animate-fade">
+                        <img src="tirtur/WhatsApp Image 2026-03-12 at 07.43.31 (1).jpeg" alt="Kegiatan Workshop"
+                            class="gallery-item__img w-full h-full object-cover block transition-transform duration-300 group-hover:scale-105">
+                        <div
+                            class="gallery-item__overlay absolute inset-0 bg-gradient-to-t from-[rgba(16,37,64,0.85)] to-transparent flex items-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <span class="text-white text-[0.8rem] font-semibold tracking-wider">Kegiatan Workshop</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Two large gear icons flanking the footer curve (as in Figma) -->
-            <div class="gallery__gears" aria-hidden="true">
-                <svg class="gallery__gear gallery__gear--left" viewBox="0 0 200 200" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="72" stroke="rgba(74,138,184,0.5)" stroke-width="16" fill="none" />
-                    <circle cx="100" cy="100" r="40" stroke="rgba(74,138,184,0.5)" stroke-width="10" fill="none" />
-                    <circle cx="100" cy="100" r="14" fill="rgba(74,138,184,0.3)" />
-                    <g fill="rgba(74,138,184,0.5)">
+            <div class="gallery__gears relative h-[clamp(140px,18vw,220px)] flex items-end justify-between overflow-hidden max-md:h-[100px] max-[480px]:h-[80px]"
+                aria-hidden="true">
+                <svg class="gallery__gear gallery__gear--left w-[clamp(140px,18vw,220px)] h-[clamp(140px,18vw,220px)] flex-shrink-0 ml-[clamp(2rem,6vw,5rem)] max-md:w-[100px] max-md:h-[100px] max-[480px]:w-[80px] max-[480px]:h-[80px]"
+                    viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="72" stroke="white" stroke-opacity="0.2" stroke-width="16"
+                        fill="none" />
+                    <circle cx="100" cy="100" r="40" stroke="white" stroke-opacity="0.2" stroke-width="10"
+                        fill="none" />
+                    <circle cx="100" cy="100" r="14" fill="white" fill-opacity="0.1" />
+                    <g fill="white" fill-opacity="0.2">
                         <rect x="90" y="10" width="20" height="22" rx="4" />
                         <rect x="90" y="168" width="20" height="22" rx="4" />
                         <rect x="10" y="90" width="22" height="20" rx="4" />
@@ -286,12 +399,14 @@
                         <rect x="138" y="150" width="20" height="22" rx="4" transform="rotate(-45 148 161)" />
                     </g>
                 </svg>
-                <svg class="gallery__gear gallery__gear--right" viewBox="0 0 200 200" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="72" stroke="rgba(74,138,184,0.5)" stroke-width="16" fill="none" />
-                    <circle cx="100" cy="100" r="40" stroke="rgba(74,138,184,0.5)" stroke-width="10" fill="none" />
-                    <circle cx="100" cy="100" r="14" fill="rgba(74,138,184,0.3)" />
-                    <g fill="rgba(74,138,184,0.5)">
+                <svg class="gallery__gear gallery__gear--right w-[clamp(140px,18vw,220px)] h-[clamp(140px,18vw,220px)] flex-shrink-0 mr-[clamp(2rem,6vw,5rem)] max-md:w-[100px] max-md:h-[100px] max-[480px]:w-[80px] max-[480px]:h-[80px]"
+                    viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="72" stroke="white" stroke-opacity="0.2" stroke-width="16"
+                        fill="none" />
+                    <circle cx="100" cy="100" r="40" stroke="white" stroke-opacity="0.2" stroke-width="10"
+                        fill="none" />
+                    <circle cx="100" cy="100" r="14" fill="white" fill-opacity="0.1" />
+                    <g fill="white" fill-opacity="0.2">
                         <rect x="90" y="10" width="20" height="22" rx="4" />
                         <rect x="90" y="168" width="20" height="22" rx="4" />
                         <rect x="10" y="90" width="22" height="20" rx="4" />
@@ -314,25 +429,28 @@
         Right: Google Map embed.
         Bottom: copyright.
     -->
-    <footer id="contact" class="footer">
+    <footer id="contact" class="footer bg-navy text-text-dark">
         <!-- SVG wave curve at top -->
-        <div class="footer__wave" aria-hidden="true">
-            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="footer__wave block leading-[0] bg-navy" aria-hidden="true">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+                class="block w-full h-[clamp(40px,6vw,80px)]">
                 <path d="M0,80 C360,0 1080,0 1440,80 L1440,80 L0,80 Z" fill="#ffffff" />
             </svg>
         </div>
 
-        <div class="footer__body">
+        <div class="footer__body bg-white">
             <div class="container">
-                <div class="footer__inner">
-                    <div class="footer__info">
-                        <h3 class="footer__follow-title">Follow Us</h3>
-                        <div class="footer__socials">
+                <div
+                    class="footer__inner grid grid-cols-[1fr_1.4fr] gap-[clamp(2rem,4vw,4rem)] items-start py-[clamp(2rem,4vw,3rem)] max-md:grid-cols-1">
+                    <div class="footer__info flex flex-col gap-4">
+                        <h3 class="footer__follow-title font-sans text-[1.05rem] font-bold text-navy mb-[0.2rem]">Follow
+                            Us</h3>
+                        <div class="footer__socials flex flex-col gap-[0.65rem]">
                             <a href="https://smkn1denpasar.sch.id/" target="_blank" rel="noopener"
-                                class="footer__social">
+                                class="footer__social flex items-center gap-[0.55rem] text-[0.88rem] text-text-mid transition-all duration-300 hover:text-navy hover:translate-x-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
+                                    stroke-linejoin="round" class="flex-shrink-0 text-blue" aria-hidden="true">
                                     <circle cx="12" cy="12" r="10" />
                                     <line x1="2" y1="12" x2="22" y2="12" />
                                     <path
@@ -341,10 +459,10 @@
                                 <span>smkn1denpasar.sch.id</span>
                             </a>
                             <a href="https://www.instagram.com/smkn1denpasar/" target="_blank" rel="noopener"
-                                class="footer__social">
+                                class="footer__social flex items-center gap-[0.55rem] text-[0.88rem] text-text-mid transition-all duration-300 hover:text-navy hover:translate-x-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" aria-hidden="true">
+                                    stroke-linejoin="round" class="flex-shrink-0 text-blue" aria-hidden="true">
                                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -352,7 +470,7 @@
                                 <span>@smkn1denpasar</span>
                             </a>
                         </div>
-                        <p class="footer__address">
+                        <p class="footer__address text-[0.86rem] text-text-muted leading-[1.8]">
                             Jl. Hos Cokroaminoto No.84, Ubung,<br>
                             Kec. Denpasar Utara, Kota Denpasar,<br>
                             Bali 80116
@@ -362,14 +480,15 @@
                         <iframe title="Lokasi SMKN 1 Denpasar"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.002428003!2d115.21128!3d-8.63823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23e3b3c6765b7%3A0x36e7b26f90c27f4f!2sSMKN%201%20Denpasar!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
                             width="100%" height="280" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-[280px] border-none rounded-md block shadow-md max-[480px]:h-[200px]">
                         </iframe>
                     </div>
                 </div>
             </div>
-            <div class="footer__copyright">
+            <div class="footer__copyright border-t border-border-color bg-white py-4 text-center">
                 <div class="container">
-                    <p>&copy; 2025 TPM SMKN 1 Denpasar — All Rights Reserved</p>
+                    <p class="text-[0.8rem] text-text-muted">&copy; 2025 TPM SMKN 1 Denpasar — All Rights Reserved</p>
                 </div>
             </div>
         </div>

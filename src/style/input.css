@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-text-dark bg-white leading-relaxed antialiased overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-[1200px] mx-auto px-[clamp(1.2rem,4vw,2.5rem)];
+  }
+
+  /* Fade animation state */
+  .animate-fade {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)];
+  }
+  
+  .animate-fade.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .header__nav.is-open {
+    @apply flex !important;
+  }
+
+  .scroll-to-top {
+    @apply fixed bottom-[1.8rem] right-[1.8rem] w-11 h-11 bg-navy text-white border-none rounded-full text-[1.2rem] cursor-pointer flex items-center justify-center opacity-0 translate-y-[60px] transition-all duration-300 ease-in-out z-[990] shadow-md hover:bg-blue;
+  }
+
+  .scroll-to-top.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Custom styles that are easier to keep as CSS or need specific targeting */
+.header__nav-link::after {
+  content: "";
+  @apply absolute bottom-[-2px] left-[0.8rem] right-[0.8rem] h-[2.5px] bg-navy rounded-sm scale-x-0 origin-center transition-transform duration-[350ms] ease-[cubic-bezier(0.4,0,0.2,1)];
+}
+
+.header__nav-link:hover::after,
+.header__nav-link.active::after {
+  @apply scale-x-100;
+}
+
+.header__hamburger span {
+  @apply block h-[2px] w-full bg-navy rounded-sm transition-all duration-300;
+}
