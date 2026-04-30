@@ -31,8 +31,10 @@
                 <li><a href="#about" class="header__nav-link">About</a></li>
                 <li><a href="#career" class="header__nav-link">Career prospects</a></li>
                 <li><a href="#gallery" class="header__nav-link">Gallery</a></li>
+                <li><a href="#ekspresi" class="header__nav-link">Feedback</a></li>
             </ul>
         </nav>
+
         <div class="header__right">
             <a href="#contact" class="header__contact-btn">Contact Us</a>
             <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -304,6 +306,7 @@
                 </svg>
             </div>
         </section>
+        
 
     </main>
 
@@ -321,6 +324,40 @@
                 <path d="M0,80 C360,0 1080,0 1440,80 L1440,80 L0,80 Z" fill="#ffffff" />
             </svg>
         </div>
+
+        <section id="ekspresi" class="comment-section">
+    <div class="container">
+        <h2 class="section-title">Ekspresi Pengunjung</h2>
+       
+        <!-- Tambahkan action yang mengarah ke file PHP dan method POST -->
+<form id="feedback-form" action="kirim_ekspresi.php" method="POST" class="comment-form">
+    <!-- WAJIB tambah atribut 'name' agar terbaca oleh $_POST di PHP -->
+    <input type="text" name="nama" id="nama" placeholder="Nama Anda" required>
+    <textarea name="pesan" id="pesan" placeholder="Bagaimana ekspresi/kesan Anda tentang TPM?" required></textarea>
+    <button type="submit" class="btn-blue">Kirim Ekspresi</button>
+</form>
+
+        </form>
+
+        <div id="comment-display" class="career-grid">
+            <!-- Tempat menampilkan komentar jika diperlukan -->
+        </div>
+    </div>
+</section>
+
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+        
+       
+                
+            </div>
+        </div>
+    </div>
+</section>
 
         <div class="footer__body">
             <div class="container">
@@ -374,6 +411,7 @@
             </div>
         </div>
     </footer>
+    
 
 </body>
 

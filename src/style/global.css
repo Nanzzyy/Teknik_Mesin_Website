@@ -1191,3 +1191,53 @@ ul {
     height: 80px;
   }
 }
+
+.comment-section {
+    background-color: #f4f4f4; /* Senada dengan background body */
+    padding: 4rem 20px;
+    border-top: none;
+    box-shadow: none;
+}
+
+.comment-section h2,
+.comment-section h3,
+.comment-section .section-title {
+    text-align: center;
+}
+
+.comment-form {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.comment-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.comment-form button {
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    align-self: center;
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.9rem 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(44, 96, 150, 0.18);
+}
+
+.comment-form button:hover {
+    background: var(--blue-dark);
+}
