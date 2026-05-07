@@ -27,6 +27,7 @@
                 onerror="this.style.display='none'">
             <span class="header__logo-text font-brand text-[1.85rem] text-navy">TPM</span>
         </div>
+<<<<<<< HEAD
         <nav class="header__nav flex-1 flex justify-center max-md:hidden max-md:fixed max-md:top-[5.5rem] max-md:left-0 max-md:right-0 max-md:bg-white max-md:flex-col max-md:items-stretch max-md:px-[clamp(1.2rem,4vw,2.5rem)] max-md:py-5 max-md:shadow-md max-md:z-[800]"
             id="main-nav">
             <ul class="header__nav-list flex items-center gap-1 max-md:flex-col max-md:gap-0">
@@ -51,6 +52,21 @@
             <button
                 class="header__hamburger flex md:hidden flex-col justify-between w-[26px] h-[18px] bg-none border-none cursor-pointer p-0"
                 id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+=======
+        <nav class="header__nav" id="main-nav">
+            <ul class="header__nav-list">
+                <li><a href="#home" class="header__nav-link active">Home</a></li>
+                <li><a href="#about" class="header__nav-link">About</a></li>
+                <li><a href="#career" class="header__nav-link">Career prospects</a></li>
+                <li><a href="#gallery" class="header__nav-link">Gallery</a></li>
+                <li><a href="#ekspresi" class="header__nav-link">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__right">
+            <a href="#contact" class="header__contact-btn">Contact Us</a>
+            <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+>>>>>>> e93057105b4645a542f1bbb9e43cc5a88ba35620
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -419,6 +435,7 @@
                 </svg>
             </div>
         </section>
+        
 
     </main>
 
@@ -438,7 +455,36 @@
             </svg>
         </div>
 
+<<<<<<< HEAD
         <div class="footer__body bg-white">
+=======
+        <section id="ekspresi" class="comment-section">
+    <div class="container">
+        <h2 class="section-title">Ekspresi Pengunjung</h2>
+       
+        <!-- Tambahkan action yang mengarah ke file PHP dan method POST -->
+<form id="feedback-form" action="kirim_ekspresi.php" method="POST" class="comment-form">
+    <!-- WAJIB tambah atribut 'name' agar terbaca oleh $_POST di PHP -->
+    <input type="text" name="nama" id="nama" placeholder="Nama Anda" required>
+    <textarea name="pesan" id="pesan" placeholder="Bagaimana ekspresi/kesan Anda tentang TPM?" required></textarea>
+    <button type="submit" class="btn-blue">Kirim Ekspresi</button>
+</form>
+
+        </form>
+
+        <div id="comment-display" class="career-grid">
+            <!-- Tempat menampilkan komentar jika diperlukan -->
+        </div>
+    </div>
+</section>
+        
+            </div>
+        </div>
+    </div>
+</section>
+
+        <div class="footer__body">
+>>>>>>> e93057105b4645a542f1bbb9e43cc5a88ba35620
             <div class="container">
                 <div
                     class="footer__inner grid grid-cols-[1fr_1.4fr] gap-[clamp(2rem,4vw,4rem)] items-start py-[clamp(2rem,4vw,3rem)] max-md:grid-cols-1">
@@ -493,6 +539,7 @@
             </div>
         </div>
     </footer>
+    
 
 </body>
 
